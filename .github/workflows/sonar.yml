@@ -25,8 +25,8 @@ jobs:
           sudo apt install -y qtcreator qtbase5-dev qt5-qmake cmake
       - name: Run build-wrapper
         run: |
-          mkdir build
-          cd build
+          mkdir cmake-build
+          cd cmake-build
           cmake .. -GNinja -CMAKE_BUILD_TYPE=Debug
           cd ..
           build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} ninja -C build

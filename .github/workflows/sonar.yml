@@ -21,7 +21,7 @@ jobs:
         run: |
           sudo apt update && sudo apt upgrade
           git submodule update --init --recursive
-          sudo apt install ninja-build libsndfile1-dev
+          sudo apt install ninja-build libsndfile1-dev  alsa-base libasound2-dev
           # sudo apt install -y qtbase5-dev qttools5-dev qtchooser qt5-qmake qtbase5-dev-tools libqt5svg5-dev qt5-assistant qt5-qmltooling-plugins qt5ct qt5qevercloud-dev qt5keychain-dev
           # sudo apt-get install qtbase5-dev              
           # sudo apt-get install qtdeclarative5-dev       

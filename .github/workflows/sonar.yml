@@ -43,9 +43,7 @@ jobs:
             # PrintSupport
             # OpenGL
             # LinguistTools
-      - name: Print log file
-        run: |
-          echo "what does the fox say?"
+
       - name: Run build-wrapper
         run: |
           mkdir cmake-build
@@ -53,6 +51,10 @@ jobs:
           cmake .. -GNinja -CMAKE_BUILD_TYPE=Debug
           cd ..
           build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} ninja -C build
+      - name: Print log file
+        run: |
+          cat /home/runner/work/MuseScore/MuseScore/cmake-build/CMakeFiles/CMakeOutput.log
+
       - name: Run sonar-scanner
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

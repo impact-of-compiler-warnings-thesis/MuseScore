@@ -29,6 +29,20 @@ jobs:
           # sudo apt-get install qt-quickcontrols2-5-dev
       - name: Install qt
         uses: jurplel/install-qt-action@v3
+        with:
+          modules:
+            qtnetworkauth
+            # Quick
+            # QuickControls2
+            # QuickTemplates2
+            # QuickWidgets
+            # Xml
+            # XmlPatterns
+            # Svg
+            # Widgets
+            # PrintSupport
+            # OpenGL
+            # LinguistTools
       - name: Run build-wrapper
         run: |
           mkdir cmake-build

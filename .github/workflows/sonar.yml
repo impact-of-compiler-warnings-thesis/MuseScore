@@ -43,6 +43,9 @@ jobs:
             # PrintSupport
             # OpenGL
             # LinguistTools
+      - name: Print log file
+        run: |
+          ls
       - name: Run build-wrapper
         run: |
           mkdir cmake-build

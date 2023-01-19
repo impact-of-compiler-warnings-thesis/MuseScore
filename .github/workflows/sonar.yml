@@ -45,7 +45,7 @@ jobs:
             # LinguistTools
       - name: Print log file
         run: |
-          ls
+          cat /home/runner/work/MuseScore/MuseScore/cmake-build/CMakeFiles/CMakeOutput.log
       - name: Run build-wrapper
         run: |
           mkdir cmake-build

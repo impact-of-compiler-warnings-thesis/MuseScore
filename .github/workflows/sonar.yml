@@ -45,7 +45,6 @@ jobs:
             # LinguistTools
       - name: Print log file
         run: |
-          cat /home/runner/work/MuseScore/MuseScore/cmake-build/CMakeFiles/CMakeOutput.log
           echo "what does the fox say?"
       - name: Run build-wrapper
         run: |
